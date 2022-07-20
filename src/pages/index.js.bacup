@@ -1,0 +1,122 @@
+import Layout from "../layout/Layout";
+import Twemoji from "../components/Twemoji";
+import Link from "next/link";
+import { projects } from "../data/config";
+import { FiArrowUpRight } from "react-icons/fi";
+import { GoMarkGithub } from "react-icons/go";
+import { FaSpotify, FaProductHunt, FaInstagram } from "react-icons/fa";
+
+
+export default function Home(props) {
+  return (
+    <Layout title="Elwyn">
+      <div className="tw-pt-11">
+        <div>
+          <h1 className='tw-font-Trap tw-m-0 tw-text-4xl md:tw-text-6xl lg:tw-text-7xl tw-font-bold tw-leading-tight'>
+            Hi, <br />
+            I'm Elwyn <br />
+            Web Developer <br />
+            and UI/UX Designer
+          </h1>
+          {/* <h1 className="tw-m-0 tw-font-Inter tw-text-4xl tw-font-semibold md:tw-text-6xl lg:tw-text-7xl">
+            Hello,{" "}
+          </h1>
+          <h1 className="tw-font-Inter tw-text-4xl tw-font-semibold md:tw--mt-6 md:tw-text-6xl lg:tw-text-7xl">
+            I'm {" "}
+            <span className="tw-apple-gradient-text tw-underline tw-underline-offset-2">
+              Elwyn Ynion
+            </span>{" "}
+            - curious
+          </h1>
+          <h1 className="tw-font-Inter tw-text-4xl tw-font-semibold md:tw--mt-6 md:tw-text-6xl lg:tw-text-7xl">
+            designer and developer
+          </h1>
+          <h1 className="tw-font-Inter tw-text-4xl tw-font-semibold md:tw--mt-6 md:tw-text-6xl lg:tw-text-7xl">
+            based in Manila, Philippines
+          </h1> */}
+        </div>
+      </div>
+      <div className="tw-mt-12" id="projects">
+        <h3 className="tw-font-Inter tw-text-2xl tw-font-semibold">
+          <Twemoji emoji="⚒️" />
+          <span className="tw-ml-1">Featured Projects</span>
+        </h3>
+        {projects.projects.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="hover:scale-[0.5] tw-w-full tw-transform tw-border-b tw-border-gray-300 tw-py-2 tw-transition-all dark:tw-border-gray-700"
+            >
+              <div className="tw-flex tw-flex-col tw-items-baseline tw-justify-between sm:tw-flex-row">
+                <div className="item-center tw-flex">
+                  <Link href={item.link}>
+                    <a className="tw-transform tw-transition-all hover:tw-scale-[1.09]">
+                      <p className="border-b-[0.1px] tw-text-md tw-flex tw-flex-row tw-items-center tw-border-gray-500 tw-py-1 tw-font-Inter md:tw-text-lg lg:tw-text-xl">
+                        {item.title}
+                        <FiArrowUpRight className="tw-ml-1" />
+                      </p>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+
+        <div className="hover:scale-[0.5] tw-w-full tw-transform tw-border-b tw-border-gray-300 tw-py-2 tw-transition-all dark:tw-border-gray-700">
+          <div className="tw-flex tw-flex-col tw-items-baseline tw-justify-between sm:tw-flex-row">
+            <div className="item-center tw-flex">
+              <Link href="https://github.com/elwynynion?tab=repositories">
+                <a className="tw-transform tw-transition-all hover:tw-scale-[1.09]">
+                  <p className="border-b-[0.1px] text-slate-300 tw-text-md tw-flex tw-flex-row tw-items-center tw-border-gray-500 tw-py-1 tw-font-Inter md:tw-text-lg lg:tw-text-xl">
+                    Show more
+                    <FiArrowUpRight className="tw-ml-1" />
+                  </p>
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="tw-mt-10" id="about">
+        <h3 className="tw-font-Inter tw-text-2xl tw-font-semibold">
+          <Twemoji emoji="👋" /> <span className="tw-ml-1">About me</span>
+        </h3>
+        <p className="tw-text-md tw-mt-3 tw-font-Inter tw-leading-relaxed md:tw-w-3/5 md:tw-text-lg lg:tw-text-xl">
+          I'm a fullstack developer, designer and senior high school student.
+          I'm interested in development, moderation, and building community
+          forum. I work on random projects in my free time. a lot involving
+          Discord!
+        </p>
+      </div>
+      <div className="tw-mt-10">
+        <h3 className="tw-font-Inter tw-text-2xl tw-font-semibold tw-mb-3">
+          <Twemoji emoji="🪄" /> <span className="tw-ml-1">Get in touch</span>
+        </h3>
+        <div className='tw-flex tw-flex-row tw-gap-x-4'>
+          <Link href='https://instagram.com/e.lwyn'>
+            <a target='_blank' className='tw-rounded-xl tw-flex-none tw-bg-gray-100 tw-p-3 tw-text-2xl tw-text-black tw-ring-zinc-500 tw-transition-all tw-duration-150 hover:tw-ring-2 tw-ring-offset-2'>
+              <FaInstagram />
+            </a>
+          </Link>
+          <Link href='https://github.com/elwynynion'>
+            <a target='_blank' className='tw-rounded-xl tw-flex-none tw-bg-gray-100 tw-p-3 tw-text-2xl tw-text-black tw-ring-zinc-500 tw-transition-all tw-duration-150 hover:tw-ring-2 tw-ring-offset-2'>
+              <GoMarkGithub />
+            </a>
+          </Link>
+          <Link href='https://open.spotify.com/user/31ksp2ytumgcqgicoctwm6oicht4'>
+            <a target='_blank' className='tw-rounded-xl tw-flex-none tw-bg-gray-100 tw-p-3 tw-text-2xl tw-text-black tw-ring-zinc-500 tw-transition-all tw-duration-150 hover:tw-ring-2 tw-ring-offset-2'>
+              <FaSpotify />
+            </a>
+          </Link>
+          <Link href='https://www.producthunt.com/@elwynynion'>
+            <a target='_blank' className='tw-rounded-xl tw-flex-none tw-bg-gray-100 tw-p-3 tw-text-2xl tw-text-black tw-ring-zinc-500 tw-transition-all tw-duration-150 hover:tw-ring-2 tw-ring-offset-2'>
+              <FaProductHunt />
+            </a>
+          </Link>
+        </div>
+        <br />
+      </div>
+    </Layout>
+  );
+}
