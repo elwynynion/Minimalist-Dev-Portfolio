@@ -57,7 +57,7 @@ $ npm run build
 Once your server has started, go to this url http://localhost:3000/ to see the portfolio locally. It should look like the below screenshot.
 
 ## Authors
-- **Elwyn Ynion** - [https://github.com/cobidev](https://github.com/cobidev)
+- **Elwyn Ynion** - [https://github.com/elwynynion](https://github.com/elwynynion)
 
 ## Support
 Please [open an issue](https://github.com/elwynynion/elwyn/issues) for support
