@@ -5,7 +5,7 @@ ForDaFolio 🚀
 
 <img src="https://raw.githubusercontent.com/elwynynion/elwyn/main/screenshot.png" alt="Elwyn Portfolio Template" />
 
-![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![underdev](https://svgshare.com/i/jFz.svg)
+![built by elwyn](https://raw.githubusercontent.com/elwynynion/elwynynion/main/badge/elwyn.svg) ![built with love](https://raw.githubusercontent.com/elwynynion/elwynynion/main/badge/love.svg)
 
 > **Note:** Since this template is currently being worked on, expect that the code is not yet organized and optimized.  Check [here](#contributing) to contribute
 
@@ -15,7 +15,7 @@ ForDaFolio 🚀
 - NextUI
 - TailwindCSS
 
-## Features
+## Features 
 ⚡️ Modern and Minimalist Design\
 ⚡ One Page Layout\
 ⚡ Fully Responsive\
